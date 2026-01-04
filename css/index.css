@@ -1,0 +1,181 @@
+/* --- 言語切り替えの仕組み --- */
+body.en .lang-ja { display: none !important; }
+body.ja .lang-en { display: none !important; }
+
+/* --- カスタムスタイル --- */
+body {
+    /* 全体の背景を少し濃いグレー/黒に設定 */
+    background-color: #121212;
+    
+    /* ★フォント設定の変更 */
+    font-family: 'Josefin Sans', 'Zen Kaku Gothic New', sans-serif;
+    
+    /* ★文字の太さを「細め(Light)」にする */
+    font-weight: 300; 
+    
+    /* ★細い文字は少し間隔を空ける */
+    letter-spacing: 0.05em; 
+    
+    /* ★文字色を完全な白ではなく、少しグレー寄りにすると目に優しい */
+    color: #d0d0d0; 
+}
+
+/* 見出し（h1, h2等）だけ少し太さを戻す場合（お好みで） */
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-weight: 300; /* Regular */
+    letter-spacing: 0.1em; /* 見出しはさらに間隔を広めに */
+}
+
+/* --- サイドバー (PC用) --- */
+.sidebar {
+    height: 100vh;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000; /* 完全な黒 */
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #333;
+    z-index: 1000;
+}
+
+/* --- メインコンテンツ --- */
+.main-content {
+    /* PCではサイドバーの分だけ右にずらす */
+    margin-left: 260px; 
+    padding: 0;
+}
+
+/* --- レスポンシブ対応 (スマホ・タブレット) --- */
+@media (max-width: 991.98px) {
+    .sidebar {
+        display: none; /* スマホではサイドバーを隠す */
+    }
+    .main-content {
+        margin-left: 0; /* マージンをリセット */
+        padding-top: 60px; /* 固定ヘッダーの分下げる */
+    }
+}
+
+/* --- ナビゲーションリンクのデザイン --- */
+.nav-link {
+    color: #b0b0b0;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+.nav-link:hover, .nav-link.active {
+    color: #ffffff;
+}
+
+/* SNSアイコン */
+.social-icons a {
+    color: #b0b0b0;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #ffffff;
+}
+
+/* --- ヒーローセクション --- */
+.hero-section {
+    background-color: #1a1a1a;
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+/* --- カードデザイン --- */
+.project-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #555;
+}
+
+.section-title {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+/* ギャラリー（Works）のデザイン */
+.work-gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px; /* 角を少し丸める */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+/* 画像の設定：4:3枠いっぱいに表示 */
+.work-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 比率を維持して枠を埋める */
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: brightness(0.8); /* 通常時は少し暗くして雰囲気を出す */
+}
+
+/* ホバー時のエフェクト */
+.work-gallery-item:hover img {
+    transform: scale(1.05); /* 少し拡大 */
+    filter: brightness(1.0); /* 本来の明るさに */
+}
+
+/* 画像の上に載るテキスト（任意） */
+.work-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 20px 10px 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* クリックを無効にする */
+}
+
+.work-gallery-item:hover .work-overlay {
+    opacity: 1;
+}
+
+/* --- モーダル（拡大表示）用CSS --- */
+.modal-content-custom {
+    background-color: transparent; /* 背景透明 */
+    border: none; /* 枠線なし */
+    box-shadow: none;
+}
+.modal-img-container {
+    text-align: center;
+    position: relative;
+}
+.modal-img-container img {
+    max-width: 100%;
+    max-height: 85vh; /* 画面からはみ出さないように */
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+/* 閉じるボタンを少し大きく、白くする */
+.btn-close-custom {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    padding: 10px;
+    z-index: 1056;
+    transition: background-color 0.3s;
+}
+.btn-close-custom:hover {
+    background-color: #fff;
+}

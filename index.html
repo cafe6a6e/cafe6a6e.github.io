@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="ja">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top d-lg-none border-bottom border-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">Takahiro Mikami</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse p-3" id="mobileNavbar">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="#about"><span class="lang-ja">私について</span><span class="lang-en">About Me</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects"><span class="lang-ja">作品集</span><span class="lang-en">Works</span></a></li>
+                    
+                    <li class="nav-item py-3">
+                        <div class="social-icons justify-content-center d-flex">
+                            <a href="https://www.instagram.com/cafebabe_timelapse/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://flickr.com/people/tmkm/" target="_blank"><i class="fa-brands fa-flickr"></i></a>
+                            <a href="https://x.com/cafe6a6e" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item mt-2">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-light btn-sm" onclick="switchLang('ja')">JP</button>
+                            <button type="button" class="btn btn-outline-light btn-sm" onclick="switchLang('en')">EN</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="sidebar d-none d-lg-flex flex-column justify-content-between p-4">
+        <div>
+            <h2 class="text-white fw-bold mb-5">Takahiro Mikami</h2>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">
+                        <i class="fa-solid fa-user me-2"></i> 
+                        <span class="lang-ja">私について</span><span class="lang-en">About Me</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">
+                        <i class="fa-solid fa-laptop-code me-2"></i>
+                        <span class="lang-ja">作品集</span><span class="lang-en">Works</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mt-auto">
+            <div class="social-icons mb-4 d-flex justify-content-center">
+                <a href="https://www.instagram.com/cafebabe_timelapse/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://flickr.com/people/tmkm/" target="_blank"><i class="fa-brands fa-flickr"></i></a>
+                <a href="https://x.com/cafe6a6e" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+            
+            <div class="d-grid gap-2">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-secondary" onclick="switchLang('ja')">Japanese</button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="switchLang('en')">English</button>
+                </div>
+            </div>
+            <p class="text-secondary text-center mt-3 small">&copy; Takahiro Mikami</p>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        
+        <!--
+        <header class="hero-section">
+            <div class="container">
+                <h1 class="display-4 fw-bold text-white">
+                    <span class="lang-ja">Takahiro Mikami</span>
+                    <span class="lang-en">Takahiro Mikami</span>
+                </h1>
+            </div>
+        </header>
+        -->
+
+        <section id="about" class="py-5">
+            <div class="container">
+                <div class="text-start mb-4">
+                    <h2 class="section-title text-white">
+                        <span class="lang-ja">自己紹介</span><span class="lang-en">About Me</span>
+                    </h2>
+                    <div class="col-md-12 text-start text-light">
+                        <p class="lang-ja fs-5">
+                            一眼レフカメラ・ドローンによる写真・動画・タイムラプス撮影、そして写真・動画編集を10年以上行っています。
+                        </p>
+                        <p class="lang-en fs-5">
+                            I have been shooting photos and videos with a DSLR camera and drone for over 10 years, and editing photos and videos. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-5 bg-dark-subtle">
+            <div class="container">
+                <div class="text-start mb-4">
+                    <h2 class="section-title text-white mb-2">
+                        <span class="lang-ja">夜景・星景写真</span><span class="lang-en">Night Landscape</span>
+                    </h2>
+                    <p class="text-secondary small">
+                        <span class="lang-ja">長時間露光による夜景・星景写真、タイムラプス動画</span>
+                        <span class="lang-en">Long exposure night landscape and starry night photos, time-lapse videos</span>
+                    </p>
+                </div>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-2 g-1">
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/night_landscape/Under the Milky Way Hachijo Island.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/night_landscape/Metropolis from Tokyo Sky Tree.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-1">
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/night_landscape/Cherry Trees Minato Mirai Evening.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/night_landscape/Starry Night Adatara Highland Fukushima.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/night_landscape/Starry Night Lake Motosuko.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/night_landscape/Starry Night Lake Nozoriko.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/night_landscape/Sunshine City Night View Ikebukuro.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/night_landscape/Zojoji Temple Evening.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/night_landscape/Kansui Park Evening.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/night_landscape/Rikugien.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/nostalgia/Ginzan Onsen.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+              </div>
+            </div>
+        </section>
+
+        <section id="projects2" class="py-5">
+            <div class="container">
+                <div class="text-start mb-4">
+                    <h2 class="section-title text-white mb-2">
+                        <span class="lang-ja">人々の生活</span><span class="lang-en">People's Life</span>
+                    </h2>
+                    <p class="text-secondary small">
+                        <span class="lang-ja">日常の中にある色彩や郷愁を捉える</span>
+                        <span class="lang-en">Capturing the colors and nostalgia of daily life</span>
+                    </p>
+                </div>
+                
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-2 g-1">
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/nostalgia/Akita Summer Day.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/nostalgia/Stores Kaminari Mon Gate.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-1">
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/nostalgia/Early Bloomer Japanese White-Eye.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/nostalgia/Ouchijuku Fukushima Morning.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/nostalgia/Snowy Day Takayama.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/nostalgia/Old Train.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/nostalgia/Chasing.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/nostalgia/Colors outside.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/nostalgia/Boy meets goat.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/nostalgia/Fireworks on the Sea Chigasaki Beach Kanagawa Aug 6 2016.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col">
+                        <div class="ratio ratio-4x3 work-gallery-item">
+                            <img src="images/nostalgia/Pedestrian.jpg" onclick="showModal(this)">
+                            <div class="work-overlay text-white text-center">
+                                <small>Click to Expand</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-secondary text-center py-4 border-top border-secondary">
+            <div class="container">
+                <p class="mb-0">
+                    <span class="lang-ja">お問い合わせは Instagram, X, Facebook などのDMへお気軽にご連絡ください</span>
+                    <span class="lang-en">Please contact me via direct messages on Instagram, X, or Facebook</span>
+                </p>
+            </div>
+        </footer>
+    </main>
+
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl"> <div class="modal-content modal-content-custom">
+                <div class="modal-body p-0">
+                    <div class="modal-img-container">
+                        <button type="button" class="btn-close btn-close-custom" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <img src="" id="modalImage" alt="Enlarged Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>
